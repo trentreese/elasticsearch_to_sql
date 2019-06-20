@@ -18,28 +18,28 @@ Sample SQL config output:
 ![Config Table](config_table.jpg)
 
 In the .yml file, define the fields in your destination table:
-  fields:
-        - datetime # for the timestamp field, included by default.
-        - country # sample fields, add or remove as desired. Must match the fields retrieved from ES.
-        - user_id
-        - uuid
-        - action
-        - context
-        - referrer
+  fields: <br>
+        - datetime # for the timestamp field, included by default. <br>
+        - country # sample fields, add or remove as desired. Must match the fields retrieved from ES. <br>
+        - user_id <br>
+        - uuid <br>
+        - action <br>
+        - context <br>
+        - referrer <br>
         
 Then define the path to these fields in the elasticsearch JSON results:
-  fields: # sample path to field values. Code looks to nested hits / hits for attributes.
-         - country: '_source.query_params.country'
-         - user_id: '_source.query_params.user_id'
-         - uuid: '_source.query_params.uuid'
-         - action: '_source.query_params.action'
-         - context: '_source.query_params.context'
-         - referrer: '_source.referrer'
-
-Requirements:
-DateTime>=4.3
-mysql-connector>=2.1.4
-pandas>=0.23.4
-PyYAML>=3.13
-SQLAlchemy>=1.2.14
-timedelta>=2018.11.20
+  fields: # sample path to field values. Code looks to nested hits / hits for attributes.  <br>
+         - country: '_source.query_params.country' <br>
+         - user_id: '_source.query_params.user_id' <br>
+         - uuid: '_source.query_params.uuid' <br>
+         - action: '_source.query_params.action' <br>
+         - context: '_source.query_params.context' <br>
+         - referrer: '_source.referrer' <br>
+ 
+Requirements: <br>
+DateTime>=4.3 <br>
+mysql-connector>=2.1.4 <br>
+pandas>=0.23.4 <br>
+PyYAML>=3.13 <br>
+SQLAlchemy>=1.2.14 <br>
+timedelta>=2018.11.20 <br>
