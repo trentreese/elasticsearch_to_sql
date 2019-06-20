@@ -1,0 +1,30 @@
+db:
+  dialect: mysql+mysqlconnector
+  host: your_server.name.com
+  port: 3306
+  user: your_user
+  passwd: your_pw
+  db: your_db
+  destination_table: your_destination_table
+  fields:
+        - datetime # for the timestamp field, included by default.
+        - country # sample fields, add or remove as desired. Must match the fields retrieved from ES.
+        - user_id
+        - uuid
+        - action
+        - context
+        - referrer
+
+es:
+  host: your_http_elasticsearch_host
+  port: 443 #or other
+  event: your_event # used for filtering the index. rename as needed but must match in template.py file.
+  config_table: elastic_configuration
+  index: your_elasticsearch_index
+  fields: # sample path to field values. Code looks to nested hits / hits for attributes.
+         - country: '_source.query_params.country'
+         - user_id: '_source.query_params.user_id'
+         - uuid: '_source.query_params.uuid'
+         - action: '_source.query_params.action'
+         - context: '_source.query_params.context'
+         - referrer: '_source.referrer'
