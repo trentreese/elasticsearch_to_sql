@@ -10,8 +10,8 @@ CREATE TABLE `elastic_configuration` (
   `date` datetime,
   `interv` int(11) ,
   `period` varchar(15),
-  `event` varchar(250) COLLATE utf8mb4_unicode_ci
-)```
+  `event` varchar(250) COLLATE utf8mb4_unicode_ci)
+```
 
 Sample SQL config output:
-![Config Table](https://raw.githubusercontent.com/trentreese/elasticsearch_to_sql/master/config_table.jpg)
+![Config Table](config_table.jpg)
