@@ -35,7 +35,9 @@ Then define the path to these fields in the elasticsearch JSON results:
          - action: '_source.query_params.action' <br>
          - context: '_source.query_params.context' <br>
          - referrer: '_source.referrer' <br>
- 
+
+To run the script, call `python elastic_scrolling_template.py elastic_config.yml`
+
 Requirements: <br>
 DateTime>=4.3 <br>
 mysql-connector>=2.1.4 <br>
