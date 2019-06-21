@@ -1,4 +1,4 @@
-# elasticsearch_to_sql
+# elasticsearch to sql with Python
 <h2>Dynamic Process to pull elasticsearch data, paginate through results, and post to SQL db</h2>
 
 <h4>This project is configured to run a single template .py file with a config .yml file to parse elasticsearch results and post the results to SQL. For each new query, a config file can be created and passed in the arguments, so the .py file should never need updates after first setup.</h4>
